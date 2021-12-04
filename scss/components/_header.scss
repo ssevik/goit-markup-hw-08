@@ -1,14 +1,25 @@
 .header {
-  position: relative;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    position: relative;
 
-  padding-top: 16px;
-  padding-bottom: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    border-bottom: 1px solid #ececec;
+  }
+}
+
+.container--flex {
+  @media screen and (min-width: 768px) {
+    @include flex;
+  }
 }
 
 .logo-wrap {
   display: flex;
   align-items: center;
-  // margin-right: auto;
 }
 
 .burger-btn {
@@ -62,14 +73,21 @@
 
   @media screen and(min-width: 768px) {
     display: flex;
+    margin-left: 88px;
+  }
+
+  @media screen and(min-width: 768px) {
+    // align-items: baseline;
   }
 }
 
 .nav-site {
-  margin-bottom: 302px;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    margin-bottom: 302px;
 
-  &__item:not(:last-child) {
-    margin-bottom: 32px;
+    &__item:not(:last-child) {
+      margin-bottom: 32px;
+    }
   }
 
   &__link {
@@ -82,18 +100,77 @@
 
     transition: color 250ms $animation-cubic-bezier;
 
+    @media screen and (min-width: 768px) {
+      position: relative;
+      display: block;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      font-size: 14px;
+    }
+
     &:hover,
     &:focus {
       color: $hover-color;
     }
   }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.current {
+  @media screen and (min-width: 768px) {
+    color: $hover-color;
+
+    &--аctive::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      border-radius: 4px;
+      height: 4px;
+
+      background-color: $hover-color;
+    }
+  }
 }
 
 .address {
-  margin-bottom: 64px;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    margin-bottom: 64px;
+    &__item:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
 
-  &__item:not(:last-child) {
-    margin-bottom: 32px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 84px;
+    // padding-top: 21px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
+      // align-items: center;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    margin-left: 305px;
+
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   &__cont {
@@ -105,19 +182,73 @@
 
     color: $text-color;
 
-    transition: color 250ms $animation-cubic-bezier, transform 250ms $animation-cubic-bezier,
-      transform-origin 250ms $animation-cubic-bezier;
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      transition: color 250ms $animation-cubic-bezier, transform 250ms $animation-cubic-bezier,
+        transform-origin 250ms $animation-cubic-bezier;
 
-    &:hover,
-    &:focus {
-      transform: scale(1.5);
-      transform-origin: bottom left;
-      color: $hover-color;
+      &:hover,
+      &:focus {
+        transform: scale(1.5);
+        transform-origin: bottom left;
+        color: $hover-color;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+
+      transition: color 250ms $animation-cubic-bezier;
+
+      &:hover,
+      &:focus {
+        color: $hover-color;
+      }
     }
   }
 
   &__icon {
     display: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+
+      display: inline-block;
+      margin-right: 8px;
+      fill: currentColor;
+
+      &--envelope {
+        width: 14px;
+        height: 10px;
+      }
+      &--smartphone {
+        width: 10px;
+        height: 14px;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 10px;
+
+      &--envelope {
+        width: 16px;
+        height: 12px;
+      }
+
+      &--smartphone {
+        height: 16px;
+      }
+
+      &:hover,
+      &:focus {
+        fill: $hover-color;
+      }
+    }
   }
 }
 
@@ -126,6 +257,10 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 48px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 
   &__item {
     padding-left: 10px;

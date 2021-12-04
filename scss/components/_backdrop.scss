@@ -1,263 +1,296 @@
-// .backdrop {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
 
-//   width: 100%;
-//   height: 100%;
+  width: 100%;
+  height: 100%;
 
-//   background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 
-//   opacity: 1;
-//   transition: opacity 250ms $animation-cubic-bezier;
-// }
+  opacity: 1;
+  transition: opacity 250ms $animation-cubic-bezier;
 
-// .backdrop-hidden {
-//   opacity: 0;
-//   pointer-events: none;
-// }
+  overflow-y: scroll;
 
-// .backdrop-hidden .modal {
-//   transform: translate(-50%, -50%) scale(1.2);
-// }
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    padding-top: 93px;
+    padding-right: 15px;
+    padding-bottom: 94px;
+    padding-left: 15px;
+  }
+}
 
-// .modal {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
+.backdrop-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 
-//   min-width: 528px;
-//   min-height: 581px;
+.backdrop-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.2);
+}
 
-//   background-color: $main-color;
-//   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-//     0px 2px 1px rgba(0, 0, 0, 0.2);
-//   border-radius: 4px;
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-//   transform: translate(-50%, -50%) scale(1);
-//   transition: transform 250ms $animation-cubic-bezier;
+  min-width: 450px;
+  min-height: 609px;
 
-//   &__btn {
-//     @include flex;
+  background-color: $main-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 
-//     position: absolute;
-//     top: 8px;
-//     right: 8px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms $animation-cubic-bezier;
 
-//     width: 30px;
-//     height: 30px;
+  @media screen and (min-width: 1200px) {
+    min-width: 528px;
+    min-height: 521px;
+  }
 
-//     background-color: transparent;
+  &__btn {
+    @include flex;
 
-//     @include bordered(rgba(0, 0, 0, 0.1));
-//     border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    right: 8px;
 
-//     cursor: pointer;
-//     transition: transform 250ms $animation-cubic-bezier, fill 250ms $animation-cubic-bezier;
+    width: 30px;
+    height: 30px;
 
-//     &:hover,
-//     &:focus {
-//       transform: rotate(45deg);
-//       fill: $hover-color;
-//     }
-//   }
+    background-color: transparent;
 
-//   &__svg {
-//     width: 18px;
-//     height: 18px;
-//   }
-// }
+    @include bordered(rgba(0, 0, 0, 0.1));
+    border-radius: 50%;
 
-// .modal-form {
-//   display: flex;
-//   flex-direction: column;
+    cursor: pointer;
+    transition: transform 250ms $animation-cubic-bezier, fill 250ms $animation-cubic-bezier;
 
-//   padding-top: 40px;
-//   padding-right: 40px;
-//   padding-bottom: 40px;
-//   padding-left: 40px;
+    &:hover,
+    &:focus {
+      transform: rotate(45deg);
+      fill: $hover-color;
+    }
+  }
 
-//   min-width: 448px;
+  &__svg {
+    width: 18px;
+    height: 18px;
+  }
+}
 
-//   &__title {
-//     margin-bottom: 12px;
+.modal-form {
+  display: flex;
+  flex-direction: column;
 
-//     color: $title-color;
-//     font-weight: 700;
-//     font-size: 20px;
-//     line-height: 1.15;
-//     text-align: center;
-//   }
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
 
-//   &__field {
-//     position: relative;
+  min-width: 370px;
 
-//     margin-bottom: 10px;
+  @media screen and (min-width: 1200px) {
+    min-width: 448px;
+  }
 
-//     color: $text-color;
+  &__title {
+    margin-bottom: 12px;
 
-//     font-size: 12px;
-//     line-height: 1.16;
-//     letter-spacing: 0.01em;
-//   }
+    color: $title-color;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
 
-//   &__label {
-//     display: block;
-//     margin-bottom: 4px;
-//   }
-// }
+  &__field {
+    position: relative;
 
-// .input {
-//   width: 100%;
+    margin-bottom: 10px;
 
-//   color: rgba(117, 117, 117, 0.5);
+    color: $text-color;
 
-//   @include bordered(rgba(33, 33, 33, 0.2));
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+  }
 
-//   outline: none;
-// }
+  &__label {
+    display: block;
+    margin-bottom: 4px;
+  }
+}
 
-// .modal-form__input {
-//   padding-top: 12px;
-//   padding-right: 10px;
-//   padding-bottom: 12px;
-//   padding-left: 42px;
+.input {
+  width: 100%;
 
-//   transition: border-color 250ms $animation-cubic-bezier;
+  color: rgba(117, 117, 117, 0.5);
 
-//   &:hover,
-//   &:focus {
-//     border-color: $hover-color;
-//   }
-// }
+  @include bordered(rgba(33, 33, 33, 0.2));
 
-// .modal-form__svg {
-//   position: absolute;
-//   top: 27px;
-//   left: 12px;
+  outline: none;
+}
 
-//   width: 18px;
-//   height: 18px;
+.modal-form__input {
+  padding-top: 12px;
+  padding-right: 10px;
+  padding-bottom: 12px;
+  padding-left: 42px;
 
-//   fill: $title-color;
+  transition: border-color 250ms $animation-cubic-bezier;
 
-//   transition: fill 250ms $animation-cubic-bezier;
+  &:hover,
+  &:focus {
+    border-color: $hover-color;
+  }
+}
 
-//   .modal-form__field:focus-within > & {
-//     fill: $hover-color;
-//   }
-//   .modal-form__field:hover & {
-//     fill: $hover-color;
-//   }
-// }
+.modal-form__svg {
+  position: absolute;
+  top: 27px;
+  left: 12px;
 
-// .textarea {
-//   margin-bottom: 20px;
-// }
+  width: 18px;
+  height: 18px;
 
-// .modal-form__textarea {
-//   padding-top: 12px;
-//   padding-right: 16px;
-//   padding-bottom: 12px;
-//   padding-left: 16px;
+  fill: $title-color;
 
-//   height: 120px;
+  transition: fill 250ms $animation-cubic-bezier;
 
-//   resize: none;
-//   transition: border-color 250ms $animation-cubic-bezier;
+  .modal-form__field:focus-within > & {
+    fill: $hover-color;
+  }
 
-//   &:hover,
-//   &:focus {
-//     border-color: $hover-color;
-//   }
-//   &::placeholder {
-//     color: inherit;
-//   }
-// }
+  .modal-form__field:hover & {
+    fill: $hover-color;
+  }
+}
 
-// .checkbox {
-//   @include flex;
-//   justify-content: center;
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .modal-form__field:hover {
+    color: $hover-color;
+  }
+}
 
-//   margin-bottom: 30px;
+.textarea {
+  margin-bottom: 20px;
+}
 
-//   cursor: pointer;
-// }
+.modal-form__textarea {
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
 
-// .modal-form__checkbox {
-//   position: absolute;
-//   width: 1px;
-//   height: 1px;
-//   margin: -1px;
-//   border: 0;
-//   padding: 0;
-//   clip: rect(0 0 0 0);
-//   overflow: hidden;
+  height: 120px;
 
-//   &--svg {
-//     width: 16px;
-//     height: 15px;
-//     margin-right: 8px;
+  resize: none;
+  transition: border-color 250ms $animation-cubic-bezier;
 
-//     border: 2px solid $title-color;
-//     border-radius: 2px;
-//     fill: transparent;
+  &:hover,
+  &:focus {
+    border-color: $hover-color;
+  }
+  &::placeholder {
+    color: inherit;
+  }
+}
 
-//     transition: background-color 250ms $animation-cubic-bezier, fill 250ms $animation-cubic-bezier,
-//       border-color 250ms $animation-cubic-bezier;
+.checkbox {
+  @include flex;
+  justify-content: center;
 
-//     .modal-form__checkbox:checked + & {
-//       border-color: transparent;
+  margin-bottom: 30px;
 
-//       background-color: $hover-color;
-//       fill: $main-color;
-//     }
-//   }
-// }
+  cursor: pointer;
+}
 
-// .modal-form__contract {
-//   position: relative;
-//   font-size: 14px;
-//   line-height: 1.71;
-// }
+.modal-form__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 
-// .modal-form__link {
-//   position: relative;
-//   color: $hover-color;
+  &--svg {
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
 
-//   &::after {
-//     content: '';
+    border: 2px solid $title-color;
+    border-radius: 2px;
+    fill: transparent;
 
-//     position: absolute;
-//     right: 0;
-//     bottom: 0;
+    transition: background-color 250ms $animation-cubic-bezier, fill 250ms $animation-cubic-bezier,
+      border-color 250ms $animation-cubic-bezier;
 
-//     display: inline-block;
-//     width: 100%;
-//     height: 1px;
-//     background-color: $hover-color;
-//   }
-// }
+    .modal-form__checkbox:checked + & {
+      border-color: transparent;
 
-// .modal-form__wrap {
-//   display: flex;
-//   justify-content: center;
-// }
+      background-color: $hover-color;
+      fill: $main-color;
+    }
+  }
+}
 
-// .modal-form__btn {
-//   @extend %button;
-//   padding-top: 10px;
-//   padding-right: 55px;
-//   padding-bottom: 10px;
-//   padding-left: 56px;
+.modal-form__contract {
+  position: relative;
 
-//   transition: transform 250ms $animation-cubic-bezier,
-//     background-color 250ms $animation-cubic-bezier;
+  color: $text-color;
 
-//   &:hover,
-//   &:focus {
-//     background-color: #188ce8;
-//     transform: skew(-10deg);
-//   }
-// }
+  font-size: 12px;
+  line-height: 1.71;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
+}
+
+.modal-form__link {
+  position: relative;
+  color: $hover-color;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: $hover-color;
+  }
+}
+
+.modal-form__wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-form__btn {
+  @extend %button;
+  padding-top: 10px;
+  padding-right: 55px;
+  padding-bottom: 10px;
+  padding-left: 56px;
+
+  transition: transform 250ms $animation-cubic-bezier,
+    background-color 250ms $animation-cubic-bezier;
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+    transform: skew(-10deg);
+  }
+}

@@ -164,21 +164,36 @@
           <h2 class="title">Чем мы занимаемся</h2>
           <ul class="class">
             <li class="class__item">
-              <img src="./images/class-1.jpg" alt="робота за компьютером" width="370" />
+              <img
+                srcset="./images/class-1-1x.jpg 1x, ./images/class-1-2x.jpg 2x"
+                src="./images/class-1-1x.jpg"
+                alt="робота за компьютером"
+                width="370"
+              />
               <div class="class__description">
                 <p class="class__description--text">Десктопные приложения</p>
               </div>
             </li>
 
             <li class="class__item">
-              <img src="./images/class-2.jpg" alt="робота за телефоном" width="370" />
+              <img
+                srcset="./images/class-2-1x.jpg 1x, ./images/class-2-2x.jpg 2x"
+                src="./images/class-2-1x.jpg"
+                alt="робота за телефоном"
+                width="370"
+              />
               <div class="class__description">
                 <p class="class__description--text">Мобильные приложения</p>
               </div>
             </li>
 
             <li class="class__item">
-              <img src="./images/class-3.jpg" alt="дизайн" width="370" />
+              <img
+                srcset="./images/class-3-1x.jpg 1x, ./images/class-3-2x.jpg 2x"
+                src="./images/class-3-1x.jpg"
+                alt="дизайн"
+                width="370"
+              />
               <div class="class__description">
                 <p class="class__description--text">Дизайнерские решения</p>
               </div>
@@ -196,60 +211,14 @@
             <li class="team__item">
               <img
                 class="team__item--img"
-                src="./images/team-1.jpg"
+                srcset="./images/team-1-1x.jpg 1x, ./images/team-1-2x.jpg 2x"
+                src="./images/team-1-1x.jpg"
                 alt="Игорь Демьяненко"
-                width="270"
+                width="450"
               />
               <div class="team__content">
-                <h3 class="team__item--title">Игорь Демьяненко</h3>
-                <p class="team__item--text">Product Designer</p>
-
-                <ul class="team__social">
-                  <li class="team__social--box">
-                    <a class="team__social--link" href="" aria-label="instagram link">
-                      <svg class="team__social--svg social--link">
-                        <use href="./images/sprite.svg#instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-
-                  <li class="tteam__social--box">
-                    <a class="team__social--link" href="" aria-label="twitter link">
-                      <svg class="team__social--svg social--link">
-                        <use href="./images/sprite.svg#twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-
-                  <li class="team__social--box">
-                    <a class="team__social--link" href="" aria-label="facebook link">
-                      <svg class="team__social--svg social--link">
-                        <use href="./images/sprite.svg#facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-
-                  <li class="team__social--box">
-                    <a class="team__social--link" href="" aria-label="linkedin link">
-                      <svg class="team__social--svg social--link">
-                        <use href="./images/sprite.svg#linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-
-            <li class="team__item">
-              <img
-                class="team__item--img"
-                src="./images/team-2.jpg"
-                alt="Ольга Репина"
-                width="270"
-              />
-              <div class="team__content">
-                <h3 class="team__item--title">Ольга Репина</h3>
-                <p class="team__item--text">Frontend Developer</p>
+                <h3 class="team__content--title">Игорь Демьяненко</h3>
+                <p class="team__content--text">Product Designer</p>
 
                 <ul class="team__social">
                   <li class="team__social--box">
@@ -290,13 +259,62 @@
             <li class="team__item">
               <img
                 class="team__item--img"
-                src="./images/team-3.jpg"
-                alt="Николай Тарасов"
-                width="270"
+                srcset="../images/team-2-1x.jpg 1x, ./images/team-2-2x.jpg 2x"
+                src="./images/team-2-1x.jpg"
+                alt="Ольга Репина"
+                width="450"
               />
               <div class="team__content">
-                <h3 class="team__item--title">Николай Тарасов</h3>
-                <p class="team__item--text">Marketing</p>
+                <h3 class="team__content--title">Ольга Репина</h3>
+                <p class="team__content--text">Frontend Developer</p>
+
+                <ul class="team__social">
+                  <li class="team__social--box">
+                    <a class="team__social--link" href="" aria-label="instagram link">
+                      <svg class="team__social--svg social--link">
+                        <use href="./images/sprite.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="team__social--box">
+                    <a class="team__social--link" href="" aria-label="twitter link">
+                      <svg class="team__social--svg social--link">
+                        <use href="./images/sprite.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="team__social--box">
+                    <a class="team__social--link" href="" aria-label="facebook link">
+                      <svg class="team__social--svg social--link">
+                        <use href="./images/sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="team-social-box">
+                    <a class="team__social--link" href="" aria-label="linkedin link">
+                      <svg class="team__social--svg social--link">
+                        <use href="./images/sprite.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="team__item">
+              <img
+                class="team__item--img"
+                srcset="./images/team-3-1x.jpg 1x, ./images/team-3-2x.jpg 2x"
+                src="./images/team-3-1x.jpg"
+                alt="Николай Тарасов"
+                width="450"
+              />
+              <div class="team__content">
+                <h3 class="team__content--title">Николай Тарасов</h3>
+                <p class="team__content--text">Marketing</p>
 
                 <ul class="team__social">
                   <li class="team__social--box">
@@ -337,13 +355,14 @@
             <li class="team__item">
               <img
                 class="team__item--img"
-                src="./images/team-4.jpg"
+                srcset="./images/team-4-1x.jpg 1x, ./images/team-4-2x.jpg 2x"
+                src="./images/team-4-1x.jpg"
                 alt="Михаил Ермаков"
-                width="270"
+                width="450"
               />
               <div class="team__content">
-                <h3 class="team__item--title">Михаил Ермаков</h3>
-                <p class="team__item--text">UI Designer</p>
+                <h3 class="team__content--title">Михаил Ермаков</h3>
+                <p class="team__content--text">UI Designer</p>
 
                 <ul class="team__social">
                   <li class="team__social--box">
@@ -446,12 +465,12 @@
     <!-- footer start -->
     <footer class="footer">
       <div class="container">
-        <div class="flex">
+        <div class="footer-flex">
           <div class="footer__inner">
             <a class="logo footer__logo" href="./index.html"
               >Web<span class="footer__logo--color">Studio</span></a
             >
-            <address>
+            <address class="footer-wrap">
               <ul>
                 <li class="footer-address">
                   <a class="footer-address__cont" href="">г. Киев, пр-т Леси Украинки, 26</a>
