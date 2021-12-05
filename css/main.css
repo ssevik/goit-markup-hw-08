@@ -424,17 +424,15 @@ button {
   color: #000000;
 }
 
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .header {
     position: relative;
     padding-top: 16px;
     padding-bottom: 16px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .header {
-    border-bottom: 1px solid #ececec;
   }
 }
 
