@@ -432,7 +432,7 @@ button {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .header {
     border-bottom: 1px solid #ececec;
   }
@@ -504,6 +504,7 @@ button {
   }
   .header-wrap.is-open {
     display: block;
+    z-index: 2;
   }
 }
 
