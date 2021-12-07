@@ -47,6 +47,8 @@
 }
 
 .footer-wrap {
+  margin-bottom: 50px;
+
   @media screen and (min-width: 480px) and (max-width: 1199px) {
     margin-bottom: 60px;
   }
@@ -69,6 +71,8 @@
 }
 
 .footer__social {
+  margin-bottom: 50px;
+
   @media screen and (min-width: 480px) and (max-width: 1199px) {
     margin-bottom: 60px;
   }
@@ -145,8 +149,10 @@
 }
 
 .form__inner {
+  display: inline-block;
+  margin-bottom: 20px;
+
   @media screen and (min-width: 480px) and (max-width: 1199px) {
-    display: inline-block;
     margin-bottom: 20px;
   }
 
@@ -161,7 +167,7 @@
   padding-bottom: 15px;
   padding-left: 16px;
 
-  width: 450px;
+  width: 280px;
 
   color: rgba(255, 255, 255, 0.6);
   background-color: transparent;
@@ -174,6 +180,10 @@
   @include bordered(rgba(255, 255, 255, 0.3));
 
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
 
   @media screen and (min-width: 1200px) {
     width: 358px;

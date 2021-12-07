@@ -1,7 +1,14 @@
 .filter {
-  display: flex;
+  @media screen and (max-width: 479px) {
+    margin-bottom: 30px;
+
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 
   @media screen and (min-width: 480px) and (max-width: 767px) {
+    display: flex;
     flex-wrap: wrap;
 
     margin-bottom: 40px;
@@ -16,6 +23,7 @@
   }
 
   @media screen and (min-width: 768px) {
+    display: flex;
     justify-content: center;
 
     margin-bottom: 30px;

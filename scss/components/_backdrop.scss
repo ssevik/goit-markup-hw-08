@@ -36,8 +36,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  min-width: 450px;
-  min-height: 609px;
+  width: 300px;
+  min-height: 400px;
 
   background-color: $main-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -46,6 +46,11 @@
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms $animation-cubic-bezier;
+
+  @media screen and (min-width: 480px) {
+    min-width: 450px;
+    min-height: 609px;
+  }
 
   @media screen and (min-width: 1200px) {
     min-width: 528px;
@@ -88,12 +93,18 @@
   flex-direction: column;
 
   padding-top: 40px;
-  padding-right: 40px;
+  padding-right: 20px;
   padding-bottom: 40px;
-  padding-left: 40px;
+  padding-left: 20px;
 
-  min-width: 370px;
+  min-width: 300px;
 
+  @media screen and (min-width: 480px) {
+    padding-right: 40px;
+    padding-left: 40px;
+
+    min-width: 370px;
+  }
   @media screen and (min-width: 1200px) {
     min-width: 448px;
   }
@@ -243,6 +254,10 @@
 }
 
 .modal-form__contract {
+  @media screen and (max-width: 479px) {
+    font-size: 10px;
+  }
+
   position: relative;
 
   color: $text-color;

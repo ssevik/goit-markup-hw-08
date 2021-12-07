@@ -1,8 +1,13 @@
 .clients {
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (max-width: 479px) {
+    &__item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 
   @media screen and (min-width: 480px) and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
     &__item {
       width: calc((100% - 30px) / 2);
 
@@ -16,6 +21,8 @@
   }
 
   @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
     &__item {
       width: calc((100% - 60px) / 3);
 
