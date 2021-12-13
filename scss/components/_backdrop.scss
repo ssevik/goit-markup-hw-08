@@ -11,13 +11,15 @@
   opacity: 1;
   transition: opacity 250ms $animation-cubic-bezier;
 
-  overflow-y: scroll;
-
-  @media screen and (min-width: 480px) and (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     padding-top: 93px;
     padding-right: 15px;
     padding-bottom: 94px;
     padding-left: 15px;
+  }
+
+  @media screen and (min-width: 768px) {
+    overflow-y: scroll;
   }
 }
 
@@ -36,7 +38,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 300px;
+  padding-top: 40px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+
+  width: 310px;
   min-height: 400px;
 
   background-color: $main-color;
@@ -48,6 +55,9 @@
   transition: transform 250ms $animation-cubic-bezier;
 
   @media screen and (min-width: 480px) {
+    padding-right: 40px;
+    padding-left: 40px;
+
     min-width: 450px;
     min-height: 609px;
   }
@@ -92,17 +102,7 @@
   display: flex;
   flex-direction: column;
 
-  padding-top: 40px;
-  padding-right: 20px;
-  padding-bottom: 40px;
-  padding-left: 20px;
-
-  min-width: 300px;
-
   @media screen and (min-width: 480px) {
-    padding-right: 40px;
-    padding-left: 40px;
-
     min-width: 370px;
   }
   @media screen and (min-width: 1200px) {
