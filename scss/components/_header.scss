@@ -61,6 +61,8 @@
 
     background-color: $main-color;
 
+    z-index: 30;
+
     &.is-open {
       display: block;
     }

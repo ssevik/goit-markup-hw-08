@@ -21,7 +21,21 @@
           <a class="logo" href="./index.html">Web<span class="logo--header">Studio</span></a>
 
           <button
-            class="burger-btn is-open"
+            class="burger-btn js-open-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="header-wrap"
+            data-menu-button
+          >
+            <svg aria-label="кнопка мобильного меню" width="40" height="40">
+              <use class="icon__open-burger" href="./images/sprite.svg#open-burger"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="header-wrap js-menu-container" id="header-wrap" data-menu>
+          <button
+            class="burger-btn burger-btn__close js-close-menu"
             type="button"
             aria-expanded="false"
             aria-controls="header-wrap"
@@ -29,12 +43,9 @@
           >
             <svg aria-label="кнопка мобильного меню" width="40" height="40">
               <use class="icon__close-burger" href="./images/sprite.svg#close-burger"></use>
-              <use class="icon__open-burger" href="./images/sprite.svg#open-burger"></use>
             </svg>
           </button>
-        </div>
 
-        <div class="header-wrap" id="header-wrap" data-menu>
           <div class="heder__iner">
             <nav class="nav">
               <ul class="nav-site">
@@ -441,6 +452,12 @@
     </footer>
     <!-- footer end -->
 
-    <script src="./js/menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
